@@ -2,18 +2,11 @@
 
 function checkForSpam(message) {
 
-  let str = message.toUpperCase();
+  const str = message.toUpperCase();
 
-  if (str.includes('SPAM')) {
-    return true;
-  } else if (str.includes('SALE')) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return str.includes('SPAM') || str.includes('SALE');
  
-};
+}
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
